@@ -37,7 +37,7 @@ func TestGetAPIKeyBadAuth(t *testing.T) {
 	req := httptest.NewRequest(http.MethodGet, "/", bytes.NewBufferString(""))
 
 	testValue := "11122224333"
-	req.Header.Add("Authorization", "ApiKey "+testValue)
+	req.Header.Add("Authorization", "bad bad "+testValue)
 
 	_, err := GetAPIKey(req.Header)
 
