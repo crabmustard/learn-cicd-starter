@@ -21,10 +21,6 @@ type apiConfig struct {
 	DB *database.Queries
 }
 
-func useless(in int) int32 {
-	return 0
-}
-
 //go:embed static/*
 var staticFiles embed.FS
 
